@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   inputUsername.addEventListener('input', checkEmptyValue);
   inputPassword.addEventListener('input', checkEmptyValue);
   errorText.classList.add('error-text');
+  const showPasswordButton = document.querySelector("#password-button");
+  const inputIcon = document.querySelector("#input-icon");
+  
 
   function checkEmptyValue() {
     const passValue = inputPassword.value.trim();
@@ -62,6 +65,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const userValue = inputUsername.value;
     
     await getLogging(userValue, passValue); // Esperar la respuesta de getLogging
+  });
+
+  inputIcon.addEventListener("click", (e) => {
+    e.preventDefault();
+  
+    inputIcon.setAttribute(
+      'src',
+      inputPassword.getAttribute('type') === 'password' ?
+      'eye-off.svg' 
+       :
+      'eye.svg'
+    )
+  
+    inputPassword.setAttribute(
+      "type",
+      inputPassword.getAttribute("type") === "password" ? "text" : "password"
+    );
   });
 
   checkEmptyValue();
