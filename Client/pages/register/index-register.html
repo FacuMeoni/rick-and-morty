@@ -8,38 +8,42 @@
     <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-    <main class="containers">
-      <a href="../login/index.html" id="login-link">
-        Login
-      </a>
+    <main class="container">
+      <section id="register-section" class="right">
+        <div class="right-container">
+          <form action="submit" id="register-form" class="forms">
+            <header id="header-register">
+              <h2 class="title">
+              Sign up on Rick and Morty
+              </h2>
 
-      <header id="title-container-1">
-        <h2 class="register-title">
-          Create account
-        </h2>
 
-        <span class="register-span">
-          Register and enjoy Rick and Morty world!
-        </span>
-      </header>
+              <div class="link-container">
+                <span class="link-text">
+                  Already have an account? <a href="../login/index.html" class="link">Sign In</a>
+                </span>
+              </div>
+            </header>    
 
-      <section class="sections">
-        <form action="submit" id="register-form" class="forms">
+            <div class="input-containers">
+              <input type="text" id="username-register" placeholder="Username" class="inputs">
+            </div>
+            
+            <div class="password-input-container input-containers">
+              <input type="password" id="password-register" placeholder="Password" class="inputs">
+              <img src="../../assets/eye.svg" 
+                alt="Eye icon"  
+                id="input-icon"
+                >
+            </div>
 
-          <div class="input-containers">
-            <input type="text" id="username-register" placeholder="Username" class="inputs">
-          </div>
-          
-          <div class="input-containers">
-            <input type="password" id="password-register" placeholder="Password" class="inputs">
-          </div>
+            <button id="register-button" type="submit" class="submit-buttons"> 
+                  Register
+            </button>
 
-          <button id="register-button" type="submit" class="submit-buttons"> 
-                Register
-          </button>
-        </form>
-
-        <div class="error-container">
+            <div class="error-container">
+            </div>
+          </form>
         </div>
       </section>
     </main>
