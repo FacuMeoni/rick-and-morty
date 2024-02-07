@@ -211,8 +211,9 @@ document.addEventListener('DOMContentLoaded', () => {
   //Check that input value be between 1 and 826, if it's ok execute getCharacter
   const checkInputValue = () => {
     const id = inputID.value;
+    const regex =  /^\d+$/;
     
-    if(id <= 0 || id > 826){
+    if(id <= 0 || id > 826 || !regex.test(id)){
         errorMessage.textContent = "Please introduce ID between 1 and 826"
         return 
     }
