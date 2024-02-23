@@ -10,46 +10,37 @@
   <body>
     <main>
       <header id="header-home">
-        <nav id="navbar"> 
+        <div class="logo-container">
+          <img src="../../assets/logo.png" alt="Rick And Morty logo" height="40" width="40">
+        </div>
 
-          <div class="links-container">
-              <a href="../favorites/index-favorites.html" class="links">Favorites</a>
-              <a href="../about/index-about.html" class="links">About</a>
-          </div>
-
-          <div class="logout-container">
-            <button id="logout" class="links">
-              <svg viewBox="0 0 24 24" height="24px" width="24px" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14 4L17.5 4C20.5577 4 20.5 8 20.5 12C20.5 16 20.5577 20 17.5 20H14M3 12L15 12M3 12L7 8M3 12L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-              <span>Logout</span>
-            </button>
-          </div> 
+        <nav id="navbar">
+          <ul id="links-container">
+            <li class="items"><a href="../about/index-about.html" class="links">About</a></li>
+            <li class="items"><a href="../favorites/index-favorites.html" class="links">Favorites</a></li>
+            <li class="items"> <button id="logout" class="links">Logout</button></li>
+          </ul>
         </nav>
       </header>
 
-      <div class="background-home">
-        <h1 class="title-home">
-          Rick and Morty
-        </h1>
-      </div>
-
       <section class="cards-container">
-
-        
-          
       </section>
-
-      
 
       <footer id="home-footer">
         <div id="form-container">
           <form action="submit" id="search-bar">
-            <input type="text" id="input-id" placeholder="Search any character by ID" autocomplete="off">
-            <button id="add" type="submit">
-              <svg viewBox="0 0 24 24" fill="none" height="20" width="20"xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 7V8.2C20 9.88016 20 10.7202 19.673 11.362C19.3854 11.9265 18.9265 12.3854 18.362 12.673C17.7202 13 16.8802 13 15.2 13H4M4 13L8 9M4 13L8 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-            </button>
+            <div id="input-container">
+              <input type="text" id="input-id" placeholder="Search..." autocomplete="off">
+              <button id="add" type="submit">
+                <svg viewBox="0 0 24 24" fill="none" height="20" width="20"xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 7V8.2C20 9.88016 20 10.7202 19.673 11.362C19.3854 11.9265 18.9265 12.3854 18.362 12.673C17.7202 13 16.8802 13 15.2 13H4M4 13L8 9M4 13L8 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+              </button>
+              <tool-tip role="tooltip">
+                Submit
+              </tool-tip>
+              <p id="error-message" class="error-home"></p>
+            </div>
           </form>
         </div>
-        <p id="error-message" class="error-home"></p>
       </footer>
     </main>
   </body>
