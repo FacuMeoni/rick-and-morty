@@ -8,20 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const logoutButton = document.querySelector('#logout');
   const navbar = document.querySelector('#navbar');
   const logOutButton = document.querySelector("#logout");
+  const linksContainer = document.querySelector('#links-container');
+  const modal = document.querySelector('#instruction');
 
   // delete All characters, if user search more 
   function deleteAllCharacters() {
     if(charactersFinded.length < 2)return
     if(document.querySelector('#delete-all-button') !== null) return
 
-    const deleteButtonContainer = document.createElement('div');
-    deleteButtonContainer.setAttribute('id','delete-all-container');
+    const deleteButtonContainer = document.createElement('li');
+    deleteButtonContainer.classList.add('items');
     const deleteAllButton = document.createElement('button')
     deleteAllButton.setAttribute('id','delete-all-button');
     deleteAllButton.textContent = 'Delete all';
-
+   
     deleteButtonContainer.appendChild(deleteAllButton);
-    navbar.appendChild(deleteButtonContainer)
+    linksContainer.appendChild(deleteButtonContainer)
 
     //delete all characters
     deleteAllButton.addEventListener("click", () => {
@@ -251,5 +253,14 @@ document.addEventListener('DOMContentLoaded', () => {
     sessionStorage.removeItem("user", user);
     
   })
+
+
+  setTimeout(() => {
+    modal.setAttribute('open', true);
+  }, 1000)
+
+  setTimeout(() => {
+    modal.removeAttribute('open');
+  }, 15000)
   
 });

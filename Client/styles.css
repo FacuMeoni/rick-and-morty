@@ -283,7 +283,7 @@ button, input{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 20px 30px;  
 }
 
 #links-container {
@@ -293,7 +293,7 @@ button, input{
   gap: 10px;
 }
 
-.links, #logout {
+.links, #logout, #delete-all-button {
   color: var(--gray-color);
   font-size: 16px;
   font-weight: 500;
@@ -301,7 +301,7 @@ button, input{
   transition: color .15s ease;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 400ms ease;
+  transition: background, color 400ms ease;
 }
 
 .links:hover {
@@ -397,28 +397,51 @@ button, input{
   text-transform: uppercase;
 }
 
-tool-tip {
+#submit-message {
   color: #fff;
   position: absolute;
   z-index: 1;
   pointer-events: none;
   user-select: none;
   
-  background-color: #111;
+  background-color: hsl(297, 86%, 60%);
   padding: 8px 14px;
   font-size: .8rem;
   border-radius: 10px;
 
   top: -86%;
-  left: 86%;
+  left: 85.5%;
 
   opacity: 0;
-  transition: opacity .3s;
+  transition: opacity 300ms ease-in-out;
 }
 
-#add:hover + tool-tip {
+#delete-all-button{
+  border: 1px solid #ff0000;
+  
+}
+
+#add:hover + #submit-message {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+
+#instruction{
+  color: #fff;
+  border: none;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+
+  background-color: #111;
+  padding: 8px 14px;
+  border-radius: 10px;
+  top: -86%;
   opacity: 1;
 }
+
 
 /* Media queries */
 
@@ -434,8 +457,42 @@ tool-tip {
    justify-content: center;
   }
   #navbar{
-    justify-content: space-around;
-    margin: 0 auto;
+    justify-content: space-between;
   }
-  
 }
+
+@keyframes rebound{
+ 0% {
+  transform: translateY(-60%) 
+ }
+ 
+ 50%{
+  transform: translateY(0%);
+ }
+
+ 100% {
+  transform: translateY(-60%);
+ }
+}
+
+@keyframes appear { 
+  0%{
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes disappear { 
+  0%{
+    opacity: 100;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+ 
+ 
