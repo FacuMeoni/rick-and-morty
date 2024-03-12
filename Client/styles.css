@@ -478,22 +478,25 @@ button, input{
 }
 
 .cards-container {
+  margin: 0;
+  height: 90vh;
   display: grid;
   padding: 20px;                 
-  gap: 16px;
+  gap: 12px;
   grid-template-columns: repeat(
     auto-fill, 
     minmax(250px, 1fr)
   );
-  place-items: center;
+  place-items: start center;
+  overflow-y: auto;
+  scroll-margin: 0;
 }
 
 .card {
-  max-width: 250px;
+  width: 250px;
   height: 350px;
   background-color: #050505;
   border-radius: 8px 8px 0 0;
-  gap: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -511,11 +514,13 @@ button, input{
 }
 
 .info-container {
+  height: 30%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: start;
   text-align: start;
+  justify-content: center;
   margin: 0;
   padding: 4px; 
 }
@@ -525,8 +530,10 @@ button, input{
   top: 0; right: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 6px;
+  height: 100%;
 }
 
 .del-button {
