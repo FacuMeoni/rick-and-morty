@@ -326,9 +326,14 @@ button, input{
 }
 
 #form-container {
+  z-index: 1;
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
   border-radius: 14px;
   padding: 1px;
   background: linear-gradient(90deg, #009dff,#fc5aff);
+  margin-bottom: 40px;
 }
 
 #input-container {
