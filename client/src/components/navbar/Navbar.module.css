@@ -1,0 +1,44 @@
+.navbar {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100vh;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 40px 10px;
+}
+
+.links_container {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-top: 120px;
+    gap: 10px;
+}
+
+.links {
+    color: #fff;
+}
+
+.links:hover {
+    color: #35fcb9;
+    transition: color 400ms ease;
+}
+
+#logout:hover {
+    color: #ff0000;
+}
+
+#logout_container {
+    flex: 1;
+    display: flex;
+    align-items: end;
+}
+
+
+.active_li {
+    color: #35fcb9;
+    font-weight: 600;
+    transition: color 2s ease-in-out;
+}
